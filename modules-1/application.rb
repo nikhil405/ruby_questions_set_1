@@ -8,10 +8,8 @@
 # message when called from product object.
 require_relative 'auser'
 class Application
-Authentication.authenticate_user(Authentication::MAKE_SOUND)
-	def authentication_user
-		puts "user authentiacted!!"
-	end
+# Authentication.authenticate_user(Authentication::MAKE_SOUND)
+	include Authentication
 end
 
 class Home < Application
@@ -20,11 +18,9 @@ class Home < Application
 	# end
 end
 class Product < Application
-	def authentication_user
-		puts "You are not authenticated!!"
-	end
+
 end
 h=Home.new
-h.authentication_user
+h.authentication_user(true)
 p=Product.new
-p.authentication_user
+p.authentication_user(false)

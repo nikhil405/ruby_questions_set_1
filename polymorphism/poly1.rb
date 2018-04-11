@@ -34,39 +34,73 @@
   # 2
 
 
-class Ploy 
-  def add()
-    puts "Enter the first integer:"
-    @a=Integer(gets)
-    puts "Enter the second integer:"
-    @b=Integer(gets)
+# class Ploy 
+#   def add()
+#     puts "Enter the first integer:"
+#     @a=Integer(gets)
+#     puts "Enter the second integer:"
+#     @b=Integer(gets)
+#   end
+
+#   # def con
+#   #   puts "Enter the first integer:"
+#   #   @a=Integer(gets)
+#   #   puts "Enter the second integer:"
+#   #   @b=Integer(gets)
+#   # end
+# end
+
+# class Addition < Ploy
+#   def add
+#     super
+#     @c=@a+@b
+#     puts "Result : #{@c}"
+#   end
+# end
+# class Concatination < Ploy
+#   def con
+#     super
+#     print "#{@a}#{@b}"
+#     # print "#{@z}"
+#   end
+# end
+
+# a=Addition.new
+# a.add
+# b=Concatination.new
+# b.con
+
+
+class Poly
+  def c_add(x)
+      x.c_add
   end
-
-  # def con
-  #   puts "Enter the first integer:"
-  #   @a=Integer(gets)
-  #   puts "Enter the second integer:"
-  #   @b=Integer(gets)
-  # end
 end
-
-class Addition < Ploy
-  def add
-    super
-    @c=@a+@b
-    puts "Result : #{@c}"
+class Add
+  def c_add
+    puts "Enter the first value"
+    @x=Integer(gets)
+    puts "Enter the  Second value"
+    @y=Integer(gets)
+    @z=@x+@y
+    puts "The additonal result is : #{@z}"
+    puts "**********************************"
+    puts "ADDITION COMPLETED"
   end
 end
-class Concatination < Ploy
-  def con
-    super
-    print "#{@a}#{@b}"
-    # print "#{@z}"
+class Concate
+  def c_add
+    puts "Enter the first value"
+    @x=gets.to_i
+    puts "Enter the  Second value"
+    @y=gets.to_i
+    puts "The result is : #{@x}#{@y}"
+    puts "********************************"
+    puts "CONCATE COMPLETED"
   end
 end
-
-a=Addition.new
-a.add
-b=Concatination.new
-b.con
-
+p=Poly.new
+a=Add.new
+p.c_add(a)
+c=Concate.new
+p.c_add(c)

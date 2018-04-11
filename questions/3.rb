@@ -17,3 +17,20 @@
 #        Or
 # File not found
 
+puts "enter filname"
+aFile=gets.to_s
+# binding.pry
+file_created = File.new(aFile, "w")
+puts "Enter the content"
+content = gets.to_s
+file_created.puts(content)
+puts "new file created" 
+puts "********************"
+# binding.pry
+file_created.close
+
+puts "enter the filename"
+file=gets.to_s
+File.delete(file)
+puts "file has been deleted"
+puts "*************************"

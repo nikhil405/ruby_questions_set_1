@@ -1,8 +1,12 @@
 module  Authentication
-	MAKE_SOUND = true
-	CAN_FLY = true
-	def  Authentication.authenticate_user(hello)
-		@hello=hello
-		puts "authenticate user #{@hello}"
+	
+	def  authentication_user(hello)
+		if hello
+			puts "User Authentication"
+			puts "**********************"
+		else
+			puts "User Not Auth"
+			puts "***********************"
+		end
 	end
 end

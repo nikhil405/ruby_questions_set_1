@@ -34,24 +34,29 @@ class Father
   def fname
      @fname="Thomas"
      puts "last name : #{@fname}"
+     puts "*********************"
   end
 end
 class Mother < Father
   def mname 
      @mname="Martha"
      puts "Second name :#{@mname}"
+     puts "***********************"
   end
 end
 class Son < Mother
   def flname
      @flname="Bruce"
      puts "First name:#{@flname}"
+     puts "**********************"
+
     mname 
     fname
      # fname mname
   end
   def fullname
-    puts " Full name is :#{@flname} #{@mname} #{@fname}" 
+    puts " My name is :#{@flname} #{@mname} #{@fname}" 
+    puts "******************************************************"
 end
 end
 s=Son.new
